@@ -46,7 +46,15 @@ public class GameManager : MonoBehaviour
                 if (item != null)
                 {
                     item.IsLocked = itemData.isLocked;
-                    item.TimeLimit = itemData.timeRemaining - seconds;
+                    if (itemData.timeRemaining >= seconds)
+                    {
+                        item.TimeLimit = itemData.timeRemaining - seconds;
+                    }
+
+                    else
+                    {
+                        item.TimeLimit = 0;
+                    }
                     item.IsLimitedTime = itemData.isLimitedTime;
                 }
             }
