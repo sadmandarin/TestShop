@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class GameItemBase : ScriptableObject
 {
@@ -36,6 +37,13 @@ public abstract class GameItemBase : ScriptableObject
     public void UnlockItem()
     {
         _isLocked = false;
+
+        OnChangeLockedStatus();
+    }
+
+    public void DeactivateLimitedTime()
+    {
+        _isLimitedTime = false;
     }
 
     protected void OnChangeLockedStatus()

@@ -311,10 +311,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 983455751}
     m_Modifications:
-    - target: {fileID: 2758711828677709028, guid: 2c4308ca40e51894bb1e4e32d3d9c9b3, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3926968334263285122, guid: 2c4308ca40e51894bb1e4e32d3d9c9b3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -399,10 +395,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemBox (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7935563785425234322, guid: 2c4308ca40e51894bb1e4e32d3d9c9b3, type: 3}
-      propertyPath: _gameItem
-      value: 
-      objectReference: {fileID: 11400000, guid: bcb26863764b66f44afa20d5d90f3dc0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1287,6 +1279,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 983455751}
     m_Modifications:
+    - target: {fileID: 2758711828677709028, guid: 2c4308ca40e51894bb1e4e32d3d9c9b3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3926968334263285122, guid: 2c4308ca40e51894bb1e4e32d3d9c9b3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1371,6 +1367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemBox
       objectReference: {fileID: 0}
+    - target: {fileID: 7935563785425234322, guid: 2c4308ca40e51894bb1e4e32d3d9c9b3, type: 3}
+      propertyPath: _gameItem
+      value: 
+      objectReference: {fileID: 11400000, guid: 6bfec200300b78d4db96fef6a8598185, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

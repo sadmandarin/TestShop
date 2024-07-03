@@ -19,6 +19,6 @@ MonoBehaviour:
     Cost: 300
   - Currency: {fileID: 11400000, guid: ee8998f61bdb1574ca34c6106e7a38ab, type: 2}
     Cost: 300
+  _isLocked: 0
   _isLimitedTime: 0
-  _isLocked: 1
-  _timeLimit: -5958
+  _timeLimit: 169

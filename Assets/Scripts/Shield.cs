@@ -7,9 +7,7 @@ public class Shield : GameItemBase
 
     public override void EventHandler()
     {
-        UnlockItem();
-
-        OnChangeLockedStatus();
+        throw new System.NotImplementedException();
     }
 
     public override void ReducingTime()

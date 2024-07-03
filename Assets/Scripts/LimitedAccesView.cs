@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class LimitedAccesView : MonoBehaviour
 {
-    [SerializeField] private SetItemBox _timeRemaining;
+    [SerializeField] private SetItemBox _itemBox;
 
     private Text _text;
 
@@ -12,15 +12,15 @@ public class LimitedAccesView : MonoBehaviour
     {
         _text = GetComponent<Text>();
 
-        if (_timeRemaining != null)
+        if (_itemBox != null)
         {
-            if (_timeRemaining.GameItem != null)
+            if (_itemBox.GameItem != null)
             {
-                if (_timeRemaining.GameItem.IsLimitedTime == true)
+                if (_itemBox.GameItem.IsLimitedTime == true)
                 {
                     UpdateTimerText();
 
-                    if (_timeRemaining.GameItem.TimeLimit >= 1)
+                    if (_itemBox.GameItem.TimeLimit >= 1)
                     {
                         InvokeRepeating(nameof(UpdateCountdown), 1f, 1f);
                     }
@@ -29,21 +29,31 @@ public class LimitedAccesView : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        StopInvoke();
+    }
+
     void UpdateCountdown()
     {
-        if (_timeRemaining.GameItem.TimeLimit >= 1)
+        if (_itemBox.GameItem.TimeLimit >= 1)
         {
-            _timeRemaining.GameItem.ReducingTime();
+            _itemBox.GameItem.ReducingTime();
 
             UpdateTimerText();
+        }
+
+        else
+        {
+            StopInvoke();
         }
     }
 
     void UpdateTimerText()
     {
-        int hours = Mathf.FloorToInt(_timeRemaining.GameItem.TimeLimit / 3600);
-        int minutes = Mathf.FloorToInt((_timeRemaining.GameItem.TimeLimit % 3600) / 60);
-        int seconds = Mathf.FloorToInt(_timeRemaining.GameItem.TimeLimit % 60);
+        int hours = Mathf.FloorToInt(_itemBox.GameItem.TimeLimit / 3600);
+        int minutes = Mathf.FloorToInt((_itemBox.GameItem.TimeLimit % 3600) / 60);
+        int seconds = Mathf.FloorToInt(_itemBox.GameItem.TimeLimit % 60);
         _text.text = $"Time remaining: {hours:00}:{minutes:00}:{seconds:00}";
     }
 

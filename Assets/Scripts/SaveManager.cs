@@ -44,6 +44,7 @@ public class SaveManager : MonoBehaviour
         }
 
         string json = JsonUtility.ToJson(saveData, true);
+
         File.WriteAllText(saveFilePath, json);
 
         yield return null;
@@ -68,10 +69,7 @@ public class SaveManager : MonoBehaviour
 
         DateTime moscowTime = DateTime.Parse(saveData.lastExitTime).ToUniversalTime();
 
-
         TimeSpan timeSinceLastExit = DateTime.UtcNow - moscowTime;
-
-
 
         onSuccess?.Invoke(timeSinceLastExit);
     }

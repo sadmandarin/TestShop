@@ -7,9 +7,7 @@ public class SwordSO : GameItemBase
 
     public override void EventHandler()
     {
-        UnlockItem();
 
-        OnChangeLockedStatus();
     }
 
     public override void ReducingTime()

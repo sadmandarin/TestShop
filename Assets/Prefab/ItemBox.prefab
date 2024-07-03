@@ -396,7 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 616a28edd6cae1646b5d6fc60e82b706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeRemaining: {fileID: 7935563785425234322}
+  _itemBox: {fileID: 7935563785425234322}
 --- !u!1 &3208490879567509030
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.11764706}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 416f95149ec49eb43a7b5864b790b80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameItem: {fileID: 11400000, guid: 6bfec200300b78d4db96fef6a8598185, type: 2}
+  _gameItem: {fileID: 11400000, guid: bcb26863764b66f44afa20d5d90f3dc0, type: 2}
   _limitedAccesView: {fileID: 3652852724673921194}
   _itemName: {fileID: 7186098302631748994}
   _itemSprite: {fileID: 719231370698536372}

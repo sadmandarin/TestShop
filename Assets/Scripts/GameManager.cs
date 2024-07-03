@@ -20,11 +20,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(SaveGameAndExitCoroutine());
     }
 
-    public void SaveGame()
-    {
-        StartCoroutine(saveManager.SaveGameCoroutine(gameItems, currencies));
-    }
-
     private IEnumerator SaveGameAndExitCoroutine()
     {
         yield return StartCoroutine(saveManager.SaveGameCoroutine(gameItems, currencies));

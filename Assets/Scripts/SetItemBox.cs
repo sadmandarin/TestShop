@@ -14,6 +14,7 @@ public class SetItemBox : MonoBehaviour
 
     private void OnEnable()
     {
+        _gameItem.OnUnlockItem += UnlockItem;
         _itemName.text = _gameItem.ItemName;
         _itemSprite.sprite = _gameItem.ItemIcon;
         for (int i = 0; i < _buyButtons.Count; i++)
@@ -24,24 +25,21 @@ public class SetItemBox : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void OnDisable()
     {
-        if (_gameItem.IsLocked == false)
-        {
-            for (int i = 0; i < _buyButtons.Count; i++)
-            {
-                _buyButtons[i].interactable = false;
-
-                if (_limitedAccesView.gameObject != null)
-                {
-                    _limitedAccesView.gameObject.SetActive(false);
-                }
-            }
-        }
+        _gameItem.OnUnlockItem -= UnlockItem;
     }
 
     public void UnlockItem()
     {
-        _gameItem.UnlockItem();
+        for (int i = 0; i < _buyButtons.Count; i++)
+        {
+            _buyButtons[i].interactable = false;
+
+            if (_limitedAccesView.gameObject != null)
+            {
+                _limitedAccesView.gameObject.SetActive(false);
+            }
+        }
     }
 }

@@ -21,4 +21,4 @@ MonoBehaviour:
     Cost: 1000
   _isLocked: 1
   _isLimitedTime: 1
-  _timeLimit: 7200
+  _timeLimit: 5129

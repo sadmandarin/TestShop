@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +18,7 @@ public class ButtonClickTest : MonoBehaviour
     {
         _button = GetComponent<Button>();
         _button.onClick.AddListener(Decrease);
+        _button.interactable = _itemBox.GameItem.IsLocked == true ? true : false;
         _itemCost.text = _purchaseOption.Cost.ToString();
     }
 
@@ -30,7 +28,9 @@ public class ButtonClickTest : MonoBehaviour
         {
             _purchaseOption.Currency.DecreaseCurrency(_purchaseOption.Cost);
 
-            _itemBox.UnlockItem();
+            _itemBox.GameItem.UnlockItem();
+
+            _itemBox.GameItem.DeactivateLimitedTime();
         }
     }
 }

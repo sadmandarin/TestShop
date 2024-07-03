@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GemCurrency
   m_EditorClassIdentifier: 
   _currencyName: Gem
-  _amount: 3000
+  _amount: 18200
   _currencyImage: {fileID: 21300000, guid: e7ca47721e5850b4daa0087a5c6316ec, type: 3}
