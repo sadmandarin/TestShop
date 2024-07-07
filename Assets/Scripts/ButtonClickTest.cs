@@ -12,8 +12,6 @@ public class ButtonClickTest : MonoBehaviour
 
     public PurchaseOption PurchaseOption { get { return _purchaseOption; } set { _purchaseOption = value; } }
 
-    public Text ItemCost {  get { return _itemCost; } set { _itemCost = value; } }
-
     private void Start()
     {
         _button = GetComponent<Button>();
